@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ title or 'Seume' }}</title>
+  <link href="https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,500;1,900&family=Nunito+Sans:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">Seume</div>
+    <nav class="top-nav">
+      <a href="/about/">About</a>
+      <a href="/news/">News</a>
+    </nav>
+  </header>
+
+  <main class="page-content">
+    {{ content | safe }}
+  </main>
+</body>
+</html>
