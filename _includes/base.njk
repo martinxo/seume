@@ -6,13 +6,31 @@
   <link href="https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,500;1,900&family=Nunito+Sans:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
+
+<!-- POST HOG -->
+
+<script>
+  !function(t,e){var o,n,p,r;e.__SV=1,window.posthog=e,e._i=[],e.init=function(i,s,a){
+  function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),
+  t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",
+  p.async=!0,p.src="https://eu.posthog.com/static/array.js",r=t.getElementsByTagName("script")[0],r.parentNode.insertBefore(p,r);
+  for(var d=function(){return e},l=["capture","identify","alias","people.set","people.set_once","reset","group","groupIdentify","set_group","isFeatureEnabled","onFeatureFlags"],c=0;c<l.length;c++)g(e,l[c]);
+  e._i.push([i,s,a])}(document,window.posthog||[]);
+  posthog.init('phx_Aj3SDQXO4adWQD2OuFhI6jWcMMsCjJgrKfGgJKBeZYz9pgp', { api_host: 'https://eu.posthog.com' });
+</script>
+
+
 <body>
   <header class="site-header">
-    <div class="logo">Seume</div>
+    <div class="logo">
+      <img src="/assets/img/seumex-logo.png" alt="Seume logo">
+    </div>
+    <!-- Comment out for now
     <nav class="top-nav">
       <a href="/about/">About</a>
       <a href="/news/">News</a>
     </nav>
+    -->
   </header>
 
   <main class="page-content">

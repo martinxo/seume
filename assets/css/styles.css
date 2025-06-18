@@ -4,78 +4,104 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  background: #000;       /* black background */
-  color: #fff;            /* white text */
-}
-
-/* --- Link styling --- */
-a {
+  background: #000;
   color: #fff;
-  text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
-/* --- Header (Logo + Nav) --- */
+/* --- NAVIGATION --- */
 .site-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: #000;       /* same as body */
-  border-bottom: none;    /* remove underline */
+  position: sticky;
+  top: 0;
+  background: #000;
+  z-index: 1000;
 }
 
 .logo {
   font-weight: bold;
   font-size: 1.2rem;
+  color: #fff;
 }
 
 .top-nav a {
+  color: #fff;
   margin-left: 1.5rem;
+  text-decoration: none;
 }
 
-/* --- Page layout --- */
-.page-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.top-nav a:hover {
+  text-decoration: underline;
+}
+
+/* --- Section styling --- */
+.section {
+  padding: 4rem 2rem;
+}
+
+.dark-section {
+  background: #000;
+  color: #fff;
+}
+
+.light-section {
+  background: #fff;
+  color: #000;
+}
+
+/* --- Grid layout --- */
+.content-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
   gap: 2rem;
-  padding: 2rem;
 }
 
-/* --- Text column --- */
+.text-column, .image-column {
+  flex: 1 1 450px;
+  padding: 1rem;
+  text-align: left;
+}
+
+.image-column img {
+  display: block;
+  height: auto;
+  max-width: 100%;    /* prevents overflow on small screens */
+  margin: 0 auto;     /* centers the image horizontally */
+  width: auto;        /* allows image to keep its natural width */
+}
+
+
+/* --- Typography --- */
 .text-column h1 {
-    font-family: 'Literata', serif;
-    font-style: italic;
-    font-weight: 900;
-    font-size: 2.6rem;
-
-
+  font-family: 'Literata', serif;
+  font-style: italic;
+  font-weight: 900;
+  font-size: 2.6rem;
+  margin: 0 0 0.5rem;
 }
 
 .text-column h2 {
   font-size: 2.2rem;
   font-family: 'Literata', serif;
   font-weight: 500;
+  margin: 0 0 1rem;
 }
 
 .text-column p {
-  color: #eee;
+  font-size: 1.1rem;
+  color: inherit;
 }
 
-/* --- Image column --- */
-.image-column img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* --- Responsive layout --- */
+/* --- Responsive --- */
 @media (max-width: 768px) {
-  .page-content {
-    grid-template-columns: 1fr;
+  .content-grid {
+    flex-direction: column;
   }
 
   .site-header {
